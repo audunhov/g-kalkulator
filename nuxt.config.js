@@ -7,9 +7,9 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "g-calculator",
+    title: "G-Kalkulator",
     htmlAttrs: {
-      lang: "en",
+      lang: "no-nb",
     },
     meta: [
       { charset: "utf-8" },
