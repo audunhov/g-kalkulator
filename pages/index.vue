@@ -1,7 +1,12 @@
 <template>
   <div class="content">
-    <Calculator :value="g"></Calculator>
-    <About :value="g" :date="date"></About>
+    <main>
+      <Calculator :value="g"></Calculator>
+      <About :value="g" :date="date"></About>
+    </main>
+    <footer>
+      Laget av <a href="https://github.com/audunhov">Audun Hammer Hovda</a>
+    </footer>
   </div>
 </template>
 
@@ -37,7 +42,7 @@ export default Vue.extend({
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.content {
+main {
   text-align: center;
   position: absolute;
   display: flex;
@@ -45,5 +50,12 @@ export default Vue.extend({
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
+  width: 85vw;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  right: 1rem;
 }
 </style>
