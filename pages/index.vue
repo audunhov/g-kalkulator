@@ -55,14 +55,17 @@ main {
   width: min(600px, 100%);
   height: min(600px, 100%);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
+  transition: 0.5s;
   padding: 3em;
   border-radius: 0.5em;
   background-color: #fff;
 }
 
-main:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+@media (max-width: 600px) {
+  main {
+    height: 100%;
+    border-radius: 0;
+  }
 }
 
 footer {
