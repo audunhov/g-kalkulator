@@ -21,6 +21,7 @@
       />
       <label for="nok">NOK</label>
     </div>
+    <div class="field">Det tilsvarer {{ monthly }} kroner hver måned</div>
   </form>
 </template>
 
@@ -32,6 +33,11 @@ export default {
       nok: null,
       g: null,
     };
+  },
+  computed: {
+    monthly() {
+      return Math.ceil((this.nok ? this.nok : 0) / 12);
+    },
   },
   methods: {
     calculateG(event) {
@@ -59,8 +65,19 @@ export default {
   display: flex;
 }
 
+.field > input {
+  width: min(100%, 400px);
+  padding: 0.5em;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  border-radius: 0.5em;
+}
+
 .field > label {
   width: 40px;
   display: block;
+  height: 1em;
+  line-height: 2em;
+  margin-left: 0.25em;
+  text-align: left;
 }
 </style>
